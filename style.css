@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color-for-dark-background: #fff;
+  --text-color-for-light-background: #000;
+  --nav-backgroundcolor: #33292a;
+  --body-backgroundcolor: #f2f2f2;
+  --contact-backgroundcolor: #644b4f;
+  --footer-backgroundcolor: #333333;
+  --gallery-title-backgroundcolor: #cecece;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-backgroundcolor);
+}
+
+p {
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 5vh;
+  font-size: 4vh;
+}
+
+/* Navigation */
+
+.navigation {
+  background-color: var(--nav-backgroundcolor);
+  padding: 24px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.navigation-list a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color-for-dark-background);
+}
+
+.hamburger-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu-icon img {
+  width: 45px;
+  height: auto;
+}
+
+/*Navigation chage -  for mobile view */
+@media (max-width: 768px) {
+  .navigation-list {
+    display: none;
+    flex-direction: column;
+    background-color: var(--nav-backgroundcolor);
+    width: 100%;
+  }
+
+  .hamburger-menu-icon {
+    display: block;
+    text-align: right;
+  }
+}
+
+/* Hero section */
+
+.hero-section {
+  position: relative;
+  height: 85vh;
+  background-image: url("./images/images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title-wrapper {
+  position: absolute;
+  right: 5vh;
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: right;
+}
+
+.hero-section h1 {
+  font-size: 5vh;
+  color: var(--text-color-for-dark-background);
+}
+
+@media (min-width: 768px) {
+  .title-wrapper {
+    right: 12vw;
+    bottom: 5vh;
+  }
+  .hero-section h1 {
+    font-size: 10vh;
+  }
+}
+
+/* About Us Section */
+
+.about {
+  color: var(--text-color-for-light-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 13vw 13vw;
+}
+
+.aboutUs-wrapper,
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  height: auto;
+  width: 100%;
+  margin-top: 8vh;
+}
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    gap: 5vw;
+  }
+  .aboutUs-wrapper,
+  .image-container {
+    width: 50%;
+  }
+  .image-container img {
+    margin-top: 0;
+  }
+}
+
+/* Services Section */
+
+.services {
+  background-color: var(--nav-backgroundcolor);
+  color: var(--text-color-for-dark-background);
+  padding: 13vw 13vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-wrapper-text h2 {
+  text-align: center;
+}
+
+.icons-wrapper {
+  margin-top: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons-wrapper p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.hiking-icon,
+.cycling-icon,
+.surfing-icon,
+.car-trips-icon {
+  width: 20vw;
+  margin-bottom: 10vw;
+}
+
+.hiking-icon img,
+.cycling-icon img,
+.surfing-icon img,
+.car-trips-icon img {
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .icons-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10vh;
+  }
+  .hiking-icon,
+  .cycling-icon,
+  .surfing-icon,
+  .car-trips-icon {
+    width: 5vw;
+    margin-bottom: 0;
+  }
+}
+
+/* Trips Gallery */
+
+.trips-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vh;
+  max-width: 1300px;
+  margin: 13vw 13vw;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 1;
+}
+
+.gallery-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  padding: 3vh 0;
+  background-color: var(--gallery-title-backgroundcolor);
+  color: var(--text-color-for-light-background);
+}
+
+.gallery-title-box h2 {
+  margin-bottom: 0;
+}
+
+.photo-1 {
+  background-image: url(./images/images/simon-english-48nerZQCHgo-unsplash.jpg);
+}
+.photo-2 {
+  background-image: url(./images/images/james-wheeler-ZOA-cqKuJAA-unsplash.jpg);
+}
+.photo-3 {
+  background-image: url(./images/images/daniel-tseng-73lmMKhi2U8-unsplash.jpg);
+}
+.photo-4 {
+  background-image: url(./images/images/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg);
+}
+.photo-5 {
+  background-image: url(./images/images/patrick-szylar-45bM3XGqnDE-unsplash.jpg);
+}
+.photo-6 {
+  background-image: url(./images/images/chung-yee-tsang-wqxCKM0R6R8-unsplash.jpg);
+}
+.photo-7 {
+  background-image: url(./images/images/julian-bialowas-ilkTnuMunP8-unsplash.jpg);
+}
+.photo-8 {
+  background-image: url(./images/images/matej-drha-rbDzMcJsBkY-unsplash.jpg);
+}
+
+@media (min-width: 768px) {
+  .trips-gallery {
+    margin: 0 auto;
+    padding: 13vh 13vh;
+  }
+
+  .gallery-item,
+  .gallery-title-box {
+    width: calc(33.33% - 1vh);
+    height: 200px;
+  }
+}
+
+/* Contact Section */
+
+.contact {
+  background-color: var(--contact-backgroundcolor);
+  color: var(--text-color-for-dark-background);
+  padding: 13vw 13vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTexts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  border-radius: 4px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--body-backgroundcolor);
+}
+
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    gap: 6vw;
+  }
+}
+
+/* Reviews Section */
+
+.reviews-section {
+  padding: 13vw 13vw;
+}
+
+.reviews-title-description-wrapper {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+.review1-box,
+.review2-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5vh;
+}
+
+.review2-box {
+  margin-bottom: 10vh;
+}
+
+.review1,
+.review2 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-photo1 {
+  background-image: url(./images/images/kalen-emsley-kGSapVfg8Kw-unsplash.jpg);
+}
+
+.profile-photo2 {
+  background-image: url(./images/images/jeffrey-keenan-pUhxoSapPFA-unsplash.jpg);
+}
+
+.reviewersname {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .reviews-title-description-wrapper {
+    padding: 0 20vw;
+  }
+
+  .reviews-wrapper {
+    flex-direction: row;
+  }
+}
+
+/* Second Gallery Section */
+
+.secondGallery {
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.secondGalleryItem {
+  height: 25%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 1;
+}
+
+.image1 {
+  background-image: url(./images/images/alexey-fedenkov-BaCZYH9RLmQ-unsplash.jpg);
+}
+
+.image2 {
+  background-image: url(./images/images/omer-salom-LoijtQXXNhs-unsplash.jpg);
+}
+
+.image3 {
+  background-image: url(./images/images/vincentiu-solomon-7MH4ped6_Mo-unsplash.jpg);
+}
+
+.image4 {
+  background-image: url(./images/images/daniel-tseng-73lmMKhi2U8-unsplash.jpg);
+}
+
+@media (min-width: 768px) {
+  .secondGalleryItem {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--footer-backgroundcolor);
+  color: var(--text-color-for-dark-background);
+  text-align: center;
+  padding: 5vh 0;
+}
+
+footer a {
+  color: #efa69d;
+  font-weight: bold;
+}
+
+h6 {
+  margin-top: 15px;
+}
